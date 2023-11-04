@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Favourites</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/favourite.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="flex-row navbar">
+        <!-- simliar to home page -->
+        <div class="flex-row navbar-brand">
+            <img class="logo" src="./assests/mask.gif" alt="">
+            <a href="./index.html">
+                 <span>Superhero Hunter</span>
+            </a>
+       </div>
+       <!-- Theme Button and Favourites Button -->
+       <div class="flex-row favAndTheme-btn">
+            <button id="theme-btn" class="btn"><i class="fa-solid fa-moon"></i></button>
+            <a class="flex-row link-to-different-page" href="./index.html">
+                 <button class="btn fav-btn"> <i class="fa-solid fa-house"></i> &nbsp; Home Page</button>
+            </a>
+       </div>
+    </nav>
+
+    <div class="favourite-characters">
+        <div class="flex-row cards-container" id="container">
+
+        </div>
+    </div>
+
+    <span data-visibility="hide" class="remove-toast">Remove from Favourites</span>
+
+    <img class="bg-img" src="./assests/avengers.png" alt="">
+
+    <script src="./js/favouritePage.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" id="root" color-scheme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title id="page-title">My Awesome Website</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+    integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body class="flex-col">
+    <!-- Your web page content goes here -->
+
+    <!-- Navbar -->
+    <nav class="flex-row navbar">
+        <!-- logo and name -->
+        <div class="flex-row navbar-batch">
+            <img class="logo" src="./assests/marvel_logo.png" alt="">
+            <a href="./index.html">
+                <span>Superhero Hunter</span>
+            </a>
+        </div>
+
+        <!-- mode and favourate button -->
+        <div class="flex-row favAndTheme-btn">
+            <button id="theme-btn" class="btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <a class="flex-row link-to-different-page" href="./favouriates.html">
+                <button class="btn fav-btn">
+                    <i class="fa-solid fa-heart fav-icon"></i>
+                    &nbsp; Favourite Heroes
+                </button>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Search -->
+    <div class="flex-col searchBar-items">
+        <div class="search-bar-container flex-row" class="flex-row">
+            <div class="search-icon-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input id="search-bar" placeholder="Search your Superhero">
+        </div>
+        <ul class="flex-col" id="search-results">
+
+        </ul>
+    </div>
+
+    <span data-visibility="hide" class="fav-toast">Added to Favourites</span>
+    <span data-visibility="hide" class="remove-toast">Removed from Favourites</span>
+
+    <img class="bg-img" src="./assests/avenger.png" alt="">
+    <script src="./js/script.js"></script>
+</body>
+</html>
