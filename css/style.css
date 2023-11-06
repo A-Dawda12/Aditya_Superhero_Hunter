@@ -14,11 +14,11 @@
     --navbar-light-color: #7A0808;
 
     /* dark mode */
-    --background-dark-color : #;
+    --background-dark-color : #000000;
     /* --text-dark-color : #; */
     /* --seacrhBar-dark-box-shadow : #; */
-    --navbar-dark-background-color : #;
-    --navbar-dark-color: #;
+    --navbar-dark-background-color : #7A0808;
+    --navbar-dark-color: #000000;
 }
 
 [color-scheme="light"]{
@@ -34,7 +34,7 @@
     --text-color : var(var(--text-dark-color));
     /* --searchBar-box-shadow : var(--seacrhBar-dark-box-shadow); */
     --navbar-background-color : var(--navbar-dark-background-color);
-    --navbar-color : var(var(--navbar-dark-color));
+    --navbar-color : var(--navbar-dark-color);
 }
 
 body{
