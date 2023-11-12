@@ -92,15 +92,15 @@ window.addEventListener("load", async function(){
                     </button>
                 </a>
                 <div style="display:none;">
-                    <span>${char.name}</span>
-                    <span>${char.description}</span>
-                    <span>${char.comics}</span>
-                    <span>${char.series}</span>
-                    <span>${char.stories}</span>
-                    <span>${char.id}</span>
-                    <span>${char.portraitImage}</span>
-                    <span>${char.landscapeImage}</span>
-                    <span>${char.squareImage}</span>
+                <span>${char.id}</span>
+                <span>${char.name}</span>
+                <span>${char.comics}</span>
+                <span>${char.series}</span>
+                <span>${char.stories}</span>
+                <span>${char.description}</span>
+                <span>${char.landscapeImage}</span>
+                <span>${char.portraitImage}</span>
+                <span>${char.squareImage}</span>
                 </div>
                 <button class="btn remove-btn">
                     <i class="fa-solid fa-heart-circle-minus"></i> &nbsp; Remove from Favourites
@@ -135,6 +135,19 @@ async function addEventsToButtons(){
 
 async function addDetailedInfoInLocalStorage(detailedInfoLink){
     try {
+        //store heroInfo as user clicks on mor-info button so that this info can be retrived from localStorage
+        let heroInfo = {
+            name: detailedInfoLink.parentElement.children[7].children[1].innerHTML,
+            description: detailedInfoLink.parentElement.children[7].children[5].innerHTML,
+            comics: detailedInfoLink.parentElement.children[7].children[2].innerHTML,
+            series: detailedInfoLink.parentElement.children[7].children[3].innerHTML,
+            stories: detailedInfoLink.parentElement.children[7].children[4].innerHTML,
+            portraitImage: detailedInfoLink.parentElement.children[7].children[7].innerHTML,
+            id: detailedInfoLink.parentElement.children[7].children[0].innerHTML,
+            landscapeImage: detailedInfoLink.parentElement.children[7].children[6].innerHTML
+       }
+  
+       localStorage.setItem("heroInfo", JSON.stringify(heroInfo));
         
     } catch (error) {
         throw error

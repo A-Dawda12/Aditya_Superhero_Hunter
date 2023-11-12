@@ -1,0 +1,84 @@
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.bg-img {
+    z-index: -1;
+}
+
+/* make contain move to center */
+.info{
+    justify-content: center;
+    align-items: center;
+    height: 88%;
+}
+
+#info-container {
+    backdrop-filter: blur(5px);
+    width: 60%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.621);
+    padding: 35px 40px;
+}
+
+.hero-name {
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.potraitImage {
+    width: 20%;
+    height: auto;
+    min-width: 100px;
+}
+
+.hero-detail {
+    gap: 40px;
+}
+
+.id,.comics,.series,.stories {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.discription{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.discription b{
+    font-size: 25px;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+/* make it dynamic to handle small screen size */
+@media screen and (max-width: 650px) {
+    /* make info display in columnar manage to make up for the lack of width */
+    .hero-detail{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .discription{
+        text-align: center;
+    }
+
+    #info-container {
+        width: 85%;
+    }
+
+    .info{
+        height : 90vh;
+    }
+
+    .more-info{
+        gap: 0px;
+   }
+    
+}

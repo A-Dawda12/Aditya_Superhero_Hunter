@@ -137,7 +137,7 @@ async function showResults(searchedHero) {
                     <div class="flex-row img-info">
                         <img src="${hero.thumbnail.path+'/portrait_medium.' + hero.thumbnail.extension}" alt="">
                         <div class="hero-info">
-                            <a class="character-info" href="./more-info.html">
+                            <a class="character-info" href="./detailedInfo.html">
                                 <span class="hero-name">${hero.name}</span>
                             </a>
                         </div>
@@ -173,23 +173,22 @@ async function addEventsToButtons(){
     try {
         let favButton = document.querySelectorAll(".add-to-fav-btn");
         favButton.forEach((btn) => {
-            btn.addEventListener("click", function() {
-                addToFav(btn);
+            btn.addEventListener("click", async function() {
+                await addToFav(btn);
             });
         });
           
 
         let moreInfoLink = document.querySelectorAll(".character-info");
         moreInfoLink.forEach((detailedInfoLink) => {
-            detailedInfoLink.addEventListener("click", function() {
-                addDetailedInfoInLocalStorage(detailedInfoLink);
+            detailedInfoLink.addEventListener("click", async function() {
+                await addDetailedInfoInLocalStorage(detailedInfoLink);
             });
         });
         
     } catch (error) {
         throw error;
-    }
-    
+    }  
 }
 
 // function to add favourite hero or remove hero based on the user click
@@ -212,7 +211,6 @@ async function addToFav(buttonElement){
                 landscapeImage: buttonElement.parentElement.parentElement.children[2].children[7].innerHTML,
                 squareImage: buttonElement.parentElement.parentElement.children[2].children[8].innerHTML
             }
-
             // Retrieve the favorites array from local storage or create an empty array if it doesn't exist
             let favoritesArray = JSON.parse(localStorage.getItem("favouriteCharacters")) || [];
 
@@ -300,7 +298,7 @@ async function addDetailedInfoInLocalStorage(clickedElement) {
             squareImage: clickedElement.parentElement.parentElement.parentElement.children[2].children[8].innerHTML
         }
     
-        localStorage.setItem("detailedInfo", JSON.stringify(detailedInfo));
+        localStorage.setItem("heroInfo", JSON.stringify(detailedInfo));
     
         
     } catch (error) {
@@ -308,5 +306,3 @@ async function addDetailedInfoInLocalStorage(clickedElement) {
     }
     
 }
-
-
